@@ -1,104 +1,192 @@
 * {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: auto;
 }
 
 
-/* ----------- Photo Frames CSS For Grid  ----------- */
+/* ----------- Photo Frames CSS For Grid for PC mobile screen ----------- */
 
-.container {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: "one one two three three" "one one four five five" "six eight seven five five" "six eight nine nine ten";
+@media screen and (max-width:576px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        background-color: black;
+    }
+    div {
+        margin: 5px 5px 8px 5px;
+        border-radius: 10px;
+        border: black solid;
+        height: auto;
+    }
+    .item {
+        flex: 0 0 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 60px;
+        color: white;
+        text-transform: uppercase;
+    }
+    .item-1 {
+        background: url(/images/GirlPhoto.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: one;
+    }
+    .item-2 {
+        background: url(/images/GirlPhoto9.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: two;
+    }
+    .item-3 {
+        background: url(/images/g.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: three;
+    }
+    .item-4 {
+        background: url(/images/GirlPhoto7.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: four;
+    }
+    .item-5 {
+        background: url(/images/GirlPhoto2.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: five;
+    }
+    .item-6 {
+        background: url(/images/GirlPhoto4.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: six;
+    }
+    .item-7 {
+        background: url(/images/GirlPhoto3.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: seven;
+    }
+    .item-8 {
+        background: url(/images/GirlPhoto6.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: eight;
+    }
+    .item-9 {
+        background: url(/images/GirlPhoto5.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: nine;
+    }
+    .item-10 {
+        background: url(/images/GirlPhoto10.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: ten;
+    }
 }
 
-div {
-    margin: 5px 5px 8px 5px;
-    border-radius: 10px;
-    border: black solid;
-}
 
-.item-1 {
-    background: url(/images/GirlPhoto.jpg);
-    background-size: cover;
-    align-items: baseline;
-    background-repeat: round;
-    grid-area: one;
-}
+/* ----------- Photo Frames CSS For Grid for PC Screen ----------- */
 
-.item-2 {
-    background: url(/images/GirlPhoto9.jpg);
-    background-size: cover;
-    align-items: baseline;
-    background-repeat: round;
-    grid-area: two;
-}
-
-.item-3 {
-    background: url(/images/g.jpg);
-    background-size: cover;
-    align-items: baseline;
-    background-repeat: round;
-    grid-area: three;
-}
-
-.item-4 {
-    background: url(/images/GirlPhoto7.jpg);
-    background-size: cover;
-    align-items: baseline;
-    background-repeat: round;
-    grid-area: four;
-}
-
-.item-5 {
-    background: url(/images/GirlPhoto2.jpg);
-    background-size: cover;
-    align-items: baseline;
-    background-repeat: round;
-    grid-area: five;
-}
-
-.item-6 {
-    background: url(/images/GirlPhoto4.jpg);
-    background-size: cover;
-    align-items: baseline;
-    background-repeat: round;
-    grid-area: six;
-}
-
-.item-7 {
-    background: url(/images/GirlPhoto3.jpg);
-    background-size: cover;
-    align-items: baseline;
-    background-repeat: round;
-    grid-area: seven;
-}
-
-.item-8 {
-    background: url(/images/GirlPhoto6.jpg);
-    background-size: cover;
-    align-items: baseline;
-    background-repeat: round;
-    grid-area: eight;
-}
-
-.item-9 {
-    background: url(/images/GirlPhoto5.jpg);
-    background-size: cover;
-    align-items: baseline;
-    background-repeat: round;
-    grid-area: nine;
-}
-
-.item-10 {
-    background: url(/images/GirlPhoto10.jpg);
-    background-size: cover;
-    align-items: baseline;
-    background-repeat: round;
-    grid-area: ten;
+@media screen and (min-width:576px) {
+    .container {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: "one one two three three" "one one four five five" "six eight seven five five" "six eight nine nine ten";
+    }
+    div {
+        margin: 5px 5px 8px 5px;
+        border-radius: 10px;
+        border: black solid;
+    }
+    .item-1 {
+        background: url(/images/GirlPhoto.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: one;
+    }
+    .item-2 {
+        background: url(/images/GirlPhoto9.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: two;
+    }
+    .item-3 {
+        background: url(/images/g.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: three;
+    }
+    .item-4 {
+        background: url(/images/GirlPhoto7.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: four;
+    }
+    .item-5 {
+        background: url(/images/GirlPhoto2.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: five;
+    }
+    .item-6 {
+        background: url(/images/GirlPhoto4.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: six;
+    }
+    .item-7 {
+        background: url(/images/GirlPhoto3.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: seven;
+    }
+    .item-8 {
+        background: url(/images/GirlPhoto6.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: eight;
+    }
+    .item-9 {
+        background: url(/images/GirlPhoto5.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: nine;
+    }
+    .item-10 {
+        background: url(/images/GirlPhoto10.jpg);
+        background-size: cover;
+        align-items: baseline;
+        background-repeat: round;
+        grid-area: ten;
+    }
 }
 
 
